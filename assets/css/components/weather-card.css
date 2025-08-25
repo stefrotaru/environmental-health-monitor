@@ -1,0 +1,59 @@
+/* WeatherCard component styles */
+.weather-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: var(--space-6);
+  margin: var(--space-6) 0;
+}
+
+.weather-stat {
+  text-align: center;
+  padding: var(--space-4);
+  /* background: var(--color-gray-50); */
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-gray-100);
+  transition: var(--transition-base);
+}
+.weather-stat:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+.stat-label {
+  display: block;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  /* color: var(--color-gray-500); */
+  margin-bottom: var(--space-1);
+  text-transform: uppercase;
+  letter-spacing: 0.025em;
+}
+.stat-value {
+  display: block;
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+  /* color: var(--color-gray-800); */
+  line-height: 1.2;
+}
+
+
+
+/* Responsive design */
+@media (max-width: 640px) {
+  .weather-card {
+    padding: var(--space-4);
+    margin: var(--space-2) 0;
+  }
+  
+  .weather-stats {
+    grid-template-columns: 1fr;
+    gap: var(--space-4);
+  }
+  
+  .weather-stat {
+    padding: var(--space-3);
+  }
+  
+  .stat-value {
+    font-size: var(--font-size-xl);
+  }
+}

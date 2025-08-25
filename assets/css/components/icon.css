@@ -1,0 +1,52 @@
+/* Icon component styles */
+.icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  user-select: none;
+  vertical-align: middle;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 1.5;
+  transition: var(--transition-fast);
+}
+
+.icon--solid {
+  fill: currentColor;
+  stroke: none;
+}
+
+/* Size variants */
+.icon--xs { width: 16px; height: 16px; }
+.icon--sm { width: 20px; height: 20px; }
+.icon--md { width: 24px; height: 24px; }
+.icon--lg { width: 28px; height: 28px; }
+.icon--xl { width: 32px; height: 32px; }
+
+/* Interactive states */
+.icon[role="button"] {
+  cursor: pointer;
+  transition: transform var(--transition-base);
+}
+
+.icon[role="button"]:hover {
+  transform: scale(1.1);
+}
+
+.icon[role="button"]:active {
+  transform: scale(0.95);
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .icon {
+    animation: none !important;
+  }
+}
+
+@media (prefers-contrast: high) {
+  .icon {
+    filter: contrast(2);
+  }
+}
